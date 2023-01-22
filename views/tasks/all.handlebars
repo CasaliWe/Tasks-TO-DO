@@ -1,0 +1,40 @@
+<main>
+    <h1>Suas Tasks</h1>
+    
+    <ul>
+            
+        {{#if vazio}}
+             <p class="vazio">Sem tarefas!</p>
+        {{/if}}
+        
+
+        {{#each tasks}}
+        <li>
+            <a href="/descri/{{this.id}}" class="descriTask">Descrição</a>
+
+            {{#if this.done}}
+            <a href="/" class="yes">{{this.title}}</a>
+            {{else}}
+            <a href="/" class="no">{{this.title}}</a>
+            {{/if}}
+    
+            <div>
+                <form action="/status" method="POST">
+                     <input type="hidden" name="id" value="{{this.id}}">
+                     <input type="hidden" name="done" value="{{this.done}}">
+    
+                     <button type="submit" class="btn"><i class="fas fa-check"></i></button>
+                </form>
+    
+                <a href="/edit/{{this.id}}" class="btn"><i class="fas fa-edit"></i></a>
+    
+    
+                <form action="/remove" method="POST">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button type="submit" class="btn"><i class="fas fa-trash-alt"></i></button>
+                </form>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</main>

@@ -1,0 +1,15 @@
+<div class="formTask">
+
+      <h1>Editar task:</h1>
+
+
+      <form action="/edit" method="POST">
+            <input type="hidden" name="id" value="{{task.id}}">
+      
+            <input class="titulo" type="text" name="title" value="{{task.title}}">
+      
+            <textarea class="descri" name="description">{{task.description}}</textarea>
+      
+            <input class="btnForm" type="submit" value="Editar">
+      </form>
+</div>

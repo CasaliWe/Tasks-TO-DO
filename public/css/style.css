@@ -1,0 +1,300 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+
+
+/*-------------NAV-----------------*/
+nav{
+     background-color: black;
+     padding: 20px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+nav h1{
+     color: white;
+}
+
+nav h1 span{
+    color: red;
+}
+
+nav ul {
+     display: flex;
+}
+
+nav ul li{
+     list-style: none;
+}
+
+nav ul li a{
+   text-decoration: none;
+   color: white;
+   margin: 0 10px;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+/*-------------NAV-----------------*/
+
+
+
+
+
+
+/*---------------MAIN----------------*/
+main{
+     height: 500px;
+     overflow: scroll;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 20px;
+}
+
+main ul {
+     width: 100%;
+     margin: 20px 0px;
+}
+
+
+main ul li{
+     display: flex;
+     padding: 5px;
+     justify-content: space-between;
+     width: 70%;
+     margin: 0 auto;
+     margin-bottom: 10px;
+     padding: 15px;
+     background-color: black;
+}
+
+
+main ul li div{
+    display: flex;
+}
+
+main ul li div form{
+    margin: 0px 10px;
+}
+
+.btn{
+     background-color: transparent;
+     color: red;
+     text-decoration: none;
+     cursor: pointer;
+     transition: 300ms;
+}
+
+.btn:hover{
+    color: rgba(255, 0, 0, 0.425);
+    transition: 300ms;
+}
+
+
+.yes, .no{
+   color: white;
+   text-decoration: none;
+}
+
+
+.yes{
+    text-decoration: line-through;
+    color: gray;
+}
+/*---------------MAIN----------------*/
+
+
+
+
+
+
+/*-----------------Form----------------*/
+.formTask{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 400px;
+     width: 100%;
+     flex-direction: column;
+}
+
+.formTask form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.formTask h1{
+    margin-bottom: 20px;
+}
+
+.formTask .btnForm{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    width: 30%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.formTask .titulo{
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.formTask .descri{
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+
+.vazio{
+     text-align: center;
+     padding: 10px;
+     background-color: black;
+     font-size: 18px;
+     color: white;
+     width: 50%;
+     margin: 0 auto;
+}
+
+.descriTask{
+      text-decoration: none;
+      cursor: pointer;
+      transition: 400ms;
+      color: red;
+}
+
+.descriTask:hover{
+    color: rgba(255, 0, 0, 0.486);
+    transition: 400ms;
+}
+
+
+/*-----------------Form----------------*/
+
+
+
+
+
+
+
+/*--------------------------Descrição----------------------*/
+.descricao{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 350px;
+      width: 100%;
+      margin-top: 40px;
+}
+
+.descricao h1{
+      font-size: 35px;
+      margin-bottom: 10px;
+}
+
+.descricao h3{
+       font-size: 22px;
+}
+
+.descricao span{
+     color: red;
+}
+
+.descricao a{
+    margin-top: 30px;
+    background-color: red;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    transition: 400ms;
+}
+
+.descricao a:hover{
+    color: black;
+    transition: 400ms;
+}
+
+
+
+
+
+
+
+/*-----------------MOBILE---------------------*/
+
+
+@media (max-width:900px) {
+     nav h1{
+         font-size: 12px;
+     }
+
+     nav a{
+        font-size: 10px;
+    }
+
+    main ul{
+          width: 100%;
+    }
+
+    .descriTask{
+          font-size: 12px;
+          align-self: center;
+          margin-left: 3px;
+    }
+
+    .vazio{
+          width: 80%;
+    }
+
+    .formTask form{
+        width: 90%;
+    }
+
+    main ul li{
+        width: 100%;
+        padding: 10px 3px;
+    }
+
+    main ul li div{
+        align-self: center;
+    }
+
+    .yes, .no {
+       width: 50%;
+       word-break: break-all;
+       text-align: center;
+    }
+
+    .descricao{
+          padding: 10px;
+    }
+
+    .descricao h1{
+        margin-bottom: 35px;
+        font-size: 25px;
+    }
+
+    .descricao h3{
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .descricao a{
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+}
